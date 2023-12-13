@@ -1,5 +1,6 @@
 import pandas as pd
-
+from darts import TimeSeries
+from darts.dataprocessing.transformers import MissingValuesFiller
 
 def get_series_by_zone(df, identifier, id):
     
@@ -41,4 +42,10 @@ def change_timeindex(df):
 
 
 
+def fill_missing(incomplete_series):
+    """ propcessing to fill in missing values """
+    
+    filler = MissingValuesFiller()
+    filled = filler.transform(TimeSeries.from_series(incomplete_series))
 
+    return filled
