@@ -15,8 +15,7 @@ Correspoing Jupyter notebooks can be found in the directory `notebooks`.
 
 An TFT model with desired interpretability is built.
 
-[![](visualisations/UI.png)](visualisations/Picture1.png)
-
+![alt text](visualisations/Picture1.png "TFT")
 
 ## LSTM Autoencoder
 
