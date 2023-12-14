@@ -15,14 +15,14 @@ Correspoing Jupyter notebooks can be found in the directory `notebooks`.
 
 An TFT model with desired interpretability is built.
 
-[![](visualisations/UI.png)](visualisations/Picture 1.png)
+[![](visualisations/UI.png)](visualisations/Picture1.png)
 
 
 ## LSTM Autoencoder
 
 An LSTM AutoEncoder model is built for comparison purpose.
 
-![alt text](visualisations/Picture 2.png "LSTM AutoEncoder")
+![alt text](visualisations/Picture2.png "LSTM AutoEncoder")
 
 
 
