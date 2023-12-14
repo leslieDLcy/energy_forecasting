@@ -1,57 +1,42 @@
 energy_forecasting
 ==============================
 
-Test on some community dataset regarding energy forecasting
+Experiments on community dataset regarding energy demand/generation forecasting with uncertainty-aware deep learning models. Data are sourced from [Global Energy Forecasting Competition 2012 - Load Forecasting](https://www.kaggle.com/competitions/global-energy-forecasting-competition-2012-load-forecasting/overview) and [Global Energy Forecasting Competition 2012 - wind power Forecasting](https://www.kaggle.com/competitions/GEF2012-wind-forecasting/data).
+Correspoing Jupyter notebooks can be found in the directory `notebooks`.
 
-Project Organization
-------------
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+## *highlights*
 
+- [x] uncertainty-aware DL modelling;
+- [x] seq2seq
+
+
+## LSTM Autoencoder
+
+An intuitive web application[^1] is created for facilitating the use of `Virtual Raphael`. 
+
+<!-- [![](visualisations/UI.png)](visualisations/UI.png) -->
+
+
+## Temporal fusion transformer model
+
+The application can be easily run from terminal, after [installing the package locally](#installation). Put your PDF file into the directory `inference_reports/New Report` and call the CLI command as below. Currently, running a cycle of all the models takes about 110s. The results and visualisations will be saved into the `Predictions` directory. 
+
+<!-- ![alt text](visualisations/prediction.png "Prediction") -->
+
+
+
+## installation
+
+Some library codes for preprocessing and building models can be installed locally for convenience. For installing[^2]
+
+```shell
+pip install .
+```
+
+
+### reference
 
 --------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+[^1]: Created by [Yu Chen](https://yuchenakaleslie.github.io/);
+[^2]: Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. 
